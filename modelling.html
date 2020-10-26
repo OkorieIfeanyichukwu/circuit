@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Circuit Modelling</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<nav>
+		<h3>Circuit Modelling</h3>
+		<ul>
+			<li><a href="index.html">Main</a></li>
+			<li><a class="active" href="modelling.html">Circuit Modelling</a></li>
+			<li><a href="blocks.html">Circuit Blocks</a></li>
+		</ul>
+	</nav>
+	<main>
+		
+		<section>
+			<h2 id="model">Circuit modelling</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+						Distributed-element circuits are designed with the distributed-element model, an alternative to the lumped-element model in which the passive electrical elements of electrical resistance, capacitance and inductance are assumed to be "lumped" at one point in space in a resistor, capacitor or inductor, respectively. The distributed-element model is used when this assumption no longer holds, and these properties are considered to be distributed in space. The assumption breaks down when there is significant time for electromagnetic waves to travel from one terminal of a component to the other; "significant", in this context, implies enough time for a noticeable phase change. The amount of phase change is dependent on the wave's frequency (and inversely dependent on wavelength). A common rule of thumb amongst engineers is to change from the lumped to the distributed model when distances involved are more than one-tenth of a wavelength (a 36° phase change). The lumped model completely fails at one-quarter wavelength (a 90° phase change), with not only the value, but the nature of the component not being as predicted. Due to this dependence on wavelength, the distributed-element model is used mostly at higher frequencies; at low frequencies, distributed-element components are too bulky. Distributed designs are feasible above 300 MHz, and are the technology of choice at microwave frequencies above 1 GHz.[1]
+
+						There is no clear-cut demarcation in the frequency at which these models should be used. Although the changeover is usually somewhere in the 100-to-500 MHz range, the technological scale is also significant; miniaturised circuits can use the lumped model at a higher frequency. Printed circuit boards (PCBs) using through-hole technology are larger than equivalent designs using surface-mount technology. Hybrid integrated circuits are smaller than PCB technologies, and monolithic integrated circuits are smaller than both. Integrated circuits can use lumped designs at higher frequencies than printed circuits, and this is done in some radio frequency integrated circuits. This choice is particularly significant for hand-held devices, because lumped-element designs generally result in a smaller product.[2] 
+				</div>
+				
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="construction">Construction with transmission lines</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					overwhelming majority of distributed-element circuits are composed of lengths of transmission line, a particularly simple form to model. The cross-sectional dimensions of the line are unvarying along its length, and are small compared to the signal wavelength; thus, only distribution along the length of the line need be considered. Such an element of a distributed circuit is entirely characterised by its length and characteristic impedance. A further simplification occurs in commensurate line circuits, where all the elements are the same length. With commensurate circuits, a lumped circuit design prototype consisting of capacitors and inductors can be directly converted into a distributed circuit with a one-to-one correspondence between the elements of each circuit.[3]
+
+					Commensurate line circuits are important because a design theory for producing them exists; no general theory exists for circuits consisting of arbitrary lengths of transmission line (or any arbitrary shapes). Although an arbitrary shape can be analysed with Maxwell's equations to determine its behaviour, finding useful structures is a matter of trial and error or guesswork.[4]
+
+					An important difference between distributed-element circuits and lumped-element circuits is that the frequency response of a distributed circuit periodically repeats as shown in the Chebyshev filter example; the equivalent lumped circuit does not. This is a result of the transfer function of lumped forms being a rational function of complex frequency; distributed forms are an irrational function. Another difference is that cascade-connected lengths of line introduce a fixed delay at all frequencies (assuming an ideal line). There is no equivalent in lumped circuits for a fixed delay, although an approximation could be constructed for a limited frequency range.[5]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="advantages">Advantages and disadvantages</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					Advantages and disadvantages
+
+					Distributed-element circuits are cheap and easy to manufacture in some formats, but take up more space than lumped-element circuits. This is problematic in mobile devices (especially hand-held ones), where space is at a premium. If the operating frequencies are not too high, the designer may miniaturise components rather than switching to distributed elements. However, parasitic elements and resistive losses in lumped components are greater with increasing frequency as a proportion of the nominal value of the lumped-element impedance. In some cases, designers may choose a distributed-element design (even if lumped components are available at that frequency) to benefit from improved quality. Distributed-element designs tend to have greater power-handling capability; with a lumped component, all the energy passed by a circuit is concentrated in a small volume.[6]
+					Media
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="media">Media</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7" id="paired">
+					Paired conductors
+
+					Several types of transmission line exist, and any of them can be used to construct distributed-element circuits. The oldest (and still most widely used) is a pair of conductors; its most common form is twisted pair, used for telephone lines and Internet connections. It is not often used for distributed-element circuits because the frequencies used are lower than the point where distributed-element designs become advantageous. However, designers frequently begin with a lumped-element design and convert it to an open-wire distributed-element design. Open wire is a pair of parallel uninsulated conductors used, for instance, for telephone lines on telegraph poles. The designer does not usually intend to implement the circuit in this form; it is an intermediate step in the design process. Distributed-element designs with conductor pairs are limited to a few specialised uses, such as Lecher lines and the twin-lead used for antenna feed lines.[7] 
+
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="coaxial">Coaxial</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit3.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>A collection of coaxial directional couplers. One has the cover removed, showing its internal structure.</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Coaxial line, a centre conductor surrounded by an insulated shielding conductor, is widely used for interconnecting units of microwave equipment and for longer-distance transmissions. Although coaxial distributed-element devices were commonly manufactured during the second half of the 20th century, they have been replaced in many applications by planar forms due to cost and size considerations. Air-dielectric coaxial line is used for low-loss and high-power applications. Distributed-element circuits in other media still commonly transition to coaxial connectors at the circuit ports for interconnection purposes.[8]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="planar">Planar</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					Planar
+					Main article: Planar transmission line
+
+					The majority of modern distributed-element circuits use planar transmission lines, especially those in mass-produced consumer items. There are several forms of planar line, but the kind known as microstrip is the most common. It can be manufactured by the same process as printed circuit boards and hence is cheap to make. It also lends itself to integration with lumped circuits on the same board. Other forms of printed planar lines include stripline, finline and many variations. Planar lines can also be used in monolithic microwave integrated circuits, where they are integral to the device chip.[9]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="waveguide">Waveguide</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit4.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>A waveguide filter</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Waveguide
+					Main article: waveguide (electromagnetism)
+					Rectangular waveguide filter with five tuning screws
+					A waveguide filter
+
+					Many distributed-element designs can be directly implemented in waveguide. However, there is an additional complication with waveguides in that multiple modes are possible. These sometimes exist simultaneously, and this situation has no analogy in conducting lines. Waveguides have the advantages of lower loss and higher quality resonators over conducting lines, but their relative expense and bulk means that microstrip is often preferred. Waveguide mostly finds uses in high-end products, such as high-power military radars and the upper microwave bands (where planar formats are too lossy). Waveguide becomes bulkier with lower frequency, which militates against its use on the lower bands.[10]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="mechanical">Mechanical</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					In a few specialist applications, such as the mechanical filters in high-end radio transmitters (marine, military, amateur radio), electronic circuits can be implemented as mechanical components; this is done largely because of the high quality of the mechanical resonators. They are used in the radio frequency band (below microwave frequencies), where waveguides might otherwise be used. Mechanical circuits can also be implemented, in whole or in part, as distributed-element circuits. The frequency at which the transition to distributed-element design becomes feasible (or necessary) is much lower with mechanical circuits. This is because the speed at which signals travel through mechanical media is much lower than the speed of electrical signals.[11]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="components">Circuit Components</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					There are several structures that are repeatedly used in distributed-element circuits. Some of the common ones are described below.
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="stub">stub</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit5.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>Butterfly stub filter</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Main article: Stub (electronics)
+
+					A stub is a short length of line that branches to the side of a main line. The end of the stub is often left open- or short-circuited, but may also be terminated with a lumped component. A stub can be used on its own (for instance, for impedance matching), or several of them can be used together in a more complex circuit such as a filter. A stub can be designed as the equivalent of a lumped capacitor, inductor, or resonator.[12]
+					Five butterfly-shaped stubs in a filter
+					Butterfly stub filter
+
+					Departures from constructing with uniform transmission lines in distributed-element circuits are rare. One such departure that is widely used is the radial stub, which is shaped like a sector of a circle. They are often used in pairs, one on either side of the main transmission line. Such pairs are called butterfly or bowtie stubs.[13]
+				</div>
+
+			</div>
+		</section>
+
+		<section>
+			<h2 id="coupled">Coupled lines</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					Coupled lines are two transmission lines between which there is some electromagnetic coupling. The coupling can be direct or indirect. In indirect coupling, the two lines are run closely together for a distance with no screening between them. The strength of the coupling depends on the distance between the lines and the cross-section presented to the other line. In direct coupling, branch lines directly connect the two main lines together at intervals.[14]
+
+					Coupled lines are a common method of constructing power dividers and directional couplers. Another property of coupled lines is that they act as a pair of coupled resonators. This property is used in many distributed-element filters.[15]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="cascaded">Cascaded lines</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit6.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>An orthomode transducer (a variety of duplexer) with stepped impedance matching</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Device with three rectangular ports
+					An orthomode transducer (a variety of duplexer) with stepped impedance matching
+
+					Cascaded lines are lengths of transmission line where the output of one line is connected to the input of the next. Multiple cascaded lines of different characteristic impedances can be used to construct a filter or a wide-band impedance matching network. This is called a stepped impedance structure.[16] A single, cascaded line one-quarter wavelength long forms a quarter-wave impedance transformer. This has the useful property of transforming any impedance network into its dual; in this role, it is called an impedance inverter. This structure can be used in filters to implement a lumped-element prototype in ladder topology as a distributed-element circuit. The quarter-wave transformers are alternated with a distributed-element resonator to achieve this. However, this is now a dated design; more compact inverters, such as the impedance step, are used instead. An impedance step is the discontinuity formed at the junction of two cascaded transmission lines with different characteristic impedances.[17]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="cavity">Cavity resonator</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					A cavity resonator is an empty (or sometimes dielectric-filled) space surrounded by conducting walls. Apertures in the walls couple the resonator to the rest of the circuit. Resonance occurs due to electromagnetic waves reflected back and forth from the cavity walls setting up standing waves. Cavity resonators can be used in many media, but are most naturally formed in waveguide from the already existing metal walls of the guide.[18]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="dielectric">Dielectric resonator</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					Main article: dielectric resonator
+
+					A dielectric resonator is a piece of dielectric material exposed to electromagnetic waves. It is most often in the form of a cylinder or thick disc. Although cavity resonators can be filled with dielectric, the essential difference is that in cavity resonators the electromagnetic field is entirely contained within the cavity walls. A dielectric resonator has some field in the surrounding space. This can lead to undesirable coupling with other components. The major advantage of dielectric resonators is that they are considerably smaller than the equivalent air-filled cavity.[19]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="helical">Helical resonator</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					Main article: Helical resonator
+
+					A helical resonator is a helix of wire in a cavity; one end is unconnected, and the other is bonded to the cavity wall. Although they are superficially similar to lumped inductors, helical resonators are distributed-element components and are used in the VHF and lower UHF bands.[20]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="fractals">Fractals</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit7.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>Three-iteration Hilbert fractal resonator in microstrip</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					See also: Fractal antenna
+					diagram
+					Three-iteration Hilbert fractal resonator in microstrip[21]
+
+					The use of fractal-like curves as a circuit component is an emerging field in distributed-element circuits.[22] Fractals have been used to make resonators for filters and antennae. One of the benefits of using fractals is their space-filling property, making them smaller than other designs.[23] Other advantages include the ability to produce wide-band and multi-band designs, good in-band performance, and good out-of-band rejection.[24] In practice, a true fractal cannot be made because at each fractal iteration the manufacturing tolerances become tighter and are eventually greater than the construction method can achieve. However, after a small number of iterations, the performance is close to that of a true fractal. These may be called pre-fractals or finite-order fractals where it is necessary to distinguish from a true fractal.[25]
+
+					Fractals that have been used as a circuit component include the Koch snowflake, Minkowski island, Sierpiński curve, Hilbert curve, and Peano curve.[26] The first three are closed curves, suitable for patch antennae. The latter two are open curves with terminations on opposite sides of the fractal. This makes them suitable for use where a connection in cascade is required.[27]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="taper">Taper</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					A taper is a transmission line with a gradual change in cross-section. It can be considered the limiting case of the stepped impedance structure with an infinite number of steps.[28] Tapers are a simple way of joining two transmission lines of different characteristic impedances. Using tapers greatly reduces the mismatch effects that a direct join would cause. If the change in cross-section is not too great, no other matching circuitry may be needed.[29] Tapers can provide transitions between lines in different media, especially different forms of planar media.[30] Tapers commonly change shape linearly, but a variety of other profiles may be used. The profile that achieves a specified match in the shortest length is known as a Klopfenstein taper and is based on the Chebychev filter design.[31]
+
+					Tapers can be used to match a transmission line to an antenna. In some designs, such as the horn antenna and Vivaldi antenna, the taper is itself the antenna. Horn antennae, like other tapers, are often linear, but the best match is obtained with an exponential curve. The Vivaldi antenna is a flat (slot) version of the exponential taper.[32]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="resistance">Distributed resistance</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-7">
+					Resistive elements are generally not useful in a distributed-element circuit. However, distributed resistors may be used in attenuators and line terminations. In planar media they can be implemented as a meandering line of high-resistance material, or as a deposited patch of thin-film or thick-film material.[33] In waveguide, A card of microwave absorbent material can be inserted into the waveguide.[34] 
+
+				</div>
+				
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; 2020. OKORIE IFEANYICHUKWU </p>
+	</footer>
+</body>
+</html>

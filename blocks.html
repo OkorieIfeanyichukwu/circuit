@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Circuit blocks</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<nav>
+		<h3>Circuit Blocks</h3>
+		<ul>
+			<li><a href="index.html">Main</a></li>
+			<li><a href="modelling.html">Circuit Modelling</a></li>
+			<li><a class="active" href="blocks.html">Circuit Blocks</a></li>
+		</ul>
+	</nav>
+
+		<main>
+		
+		<section>
+			<h2 id="filters">Filters and impedance matching</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit8.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>Microstrip band-pass hairpin filter (left), followed by a low-pass stub filter</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Main article: Distributed-element filter
+					See caption
+					Microstrip band-pass hairpin filter (left), followed by a low-pass stub filter
+
+					Filters are a large percentage of circuits constructed with distributed elements. A wide range of structures are used for constructing them, including stubs, coupled lines and cascaded lines. Variations include interdigital filters, combline filters and hairpin filters. More-recent developments include fractal filters.[35] Many filters are constructed in conjunction with dielectric resonators.[36]
+
+					As with lumped-element filters, the more elements used, the closer the filter comes to an ideal response; the structure can become quite complex.[37] For simple, narrow-band requirements, a single resonator may suffice (such as a stub or spurline filter).[38]
+
+					Impedance matching for narrow-band applications is frequently achieved with a single matching stub. However, for wide-band applications the impedance-matching network assumes a filter-like design. The designer prescribes a required frequency response, and designs a filter with that response. The only difference from a standard filter design is that the filter's source and load impedances differ.[39]
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2 id="power">Power dividers, combiners and directional couplers</h2>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit9.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>Microstrip sawtooth directional coupler, a variant of the coupled-lines directional coupler</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Power dividers, combiners and directional couplers
+					Main article: Power dividers and directional couplers
+					Sawtooth coupler on a circuit board
+					Microstrip sawtooth directional coupler, a variant of the coupled-lines directional coupler[40]
+
+					A directional coupler is a four-port device which couples power flowing in one direction from one path to another. Two of the ports are the input and output ports of the main line. A portion of the power entering the input port is coupled to a third port, known as the coupled port. None of the power entering the input port is coupled to the fourth port, usually known as the isolated port. For power flowing in the reverse direction and entering the output port, a reciprocal situation occurs; some power is coupled to the isolated port, but none is coupled to the coupled port.[41]
+
+					A power divider is often constructed as a directional coupler, with the isolated port permanently terminated in a matched load (making it effectively a three-port device). There is no essential difference between the two devices. The term directional coupler is usually used when the coupling factor (the proportion of power reaching the coupled port) is low, and power divider when the coupling factor is high. A power combiner is simply a power splitter used in reverse. In distributed-element implementations using coupled lines, indirectly coupled lines are more suitable for low-coupling directional couplers; directly-coupled branch line couplers are more suitable for high-coupling power dividers.[42]
+
+					Distributed-element designs rely on an element length of one-quarter wavelength (or some other length); this will hold true at only one frequency. Simple designs, therefore, have a limited bandwidth over which they will work successfully. Like impedance matching networks, a wide-band design requires multiple sections and the design begins to resemble a filter.[43]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="hybrids">Hybrid</h2>
+			<hr>
+			<br>
+			<div class="row">
+				 class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit10.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>Hybrid ring, used to produce sum and difference signals</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Drawing of a four-port ring
+					Hybrid ring, used to produce sum and difference signals
+
+					A directional coupler which splits power equally between the output and coupled ports (a 3 dB coupler) is called a hybrid.[44] Although "hybrid" originally referred to a hybrid transformer (a lumped device used in telephones), it now has a broader meaning. A widely used distributed-element hybrid which does not use coupled lines is the hybrid ring or rat-race coupler. Each of its four ports is connected to a ring of transmission line at a different point. Waves travel in opposite directions around the ring, setting up standing waves. At some points on the ring, destructive interference results in a null; no power will leave a port set at that point. At other points, constructive interference maximises the power transferred.[45]
+
+					Another use for a hybrid coupler is to produce the sum and difference of two signals. In the illustration, two input signals are fed into the ports marked 1 and 2. The sum of the two signals appears at the port marked Σ, and the difference at the port marked Δ.[46] In addition to their uses as couplers and power dividers, directional couplers can be used in balanced mixers, frequency discriminators, attenuators, phase shifters, and antenna array feed networks.[47]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="circulators">Circulators</h2>
+			<hr>
+			<br>
+			<div class="row">
+				 class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit11.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>A coaxial ferrite circulator operating at 1 GHz</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Square, grey, three-port device with an identifying sticker
+					A coaxial ferrite circulator operating at 1 GHz
+					Main article: Circulator
+
+					A circulator is usually a three- or four-port device in which power entering one port is transferred to the next port in rotation, as if round a circle. Power can flow in only one direction around the circle (clockwise or anticlockwise), and no power is transferred to any of the other ports. Most distributed-element circulators are based on ferrite materials.[48] Uses of circulators include as an isolator to protect a transmitter (or other equipment) from damage due to reflections from the antenna, and as a duplexer connecting the antenna, transmitter and receiver of a radio system.[49]
+
+					An unusual application of a circulator is in a reflection amplifier, where the negative resistance of a Gunn diode is used to reflect back more power than it received. The circulator is used to direct the input and output power flows to separate ports.[50]
+
+					Passive circuits, both lumped and distributed, are nearly always reciprocal; however, circulators are an exception. There are several equivalent ways to define or represent reciprocity. A convenient one for circuits at microwave frequencies (where distributed-element circuits are used) is in terms of their S-parameters. A reciprocal circuit will have an S-parameter matrix, [S], which is symmetric. From the definition of a circulator, it is clear that this will not be the case,
+
+					    [ S ] = ( 0 0 1 1 0 0 0 1 0 ) {\displaystyle [S]={\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix}}} {\displaystyle [S]={\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix}}}
+
+					for an ideal three-port circulator, showing that circulators are non-reciprocal by definition. It follows that it is impossible to build a circulator from standard passive components (lumped or distributed). The presence of a ferrite, or some other non-reciprocal material or system, is essential for the device to work.[51]
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<h2 id="active">Active Components</h2>
+			<hr>
+			<br>
+			<div class="row">
+				 class="row">
+				<div class="col-md-5">
+					<figure id="circuit1">
+						<img src=".\images\circuit12.png" width="330px" height="220px">
+					</figure>
+					<figcaption>
+						<p>Microstrip circuit with discrete transistors in miniature surface-mount packages, capacitors and resistors in chip form, and biasing filters as distributed elements</p>
+					</figcaption>
+
+				</div>
+				<div class="col-md-7">
+					Transistors, capacitors and resistors on a circuit board
+					Microstrip circuit with discrete transistors in miniature surface-mount packages, capacitors and resistors in chip form, and biasing filters as distributed elements
+
+					Distributed elements are usually passive, but most applications will require active components in some role. A microwave hybrid integrated circuit uses distributed elements for many passive components, but active components (such as diodes, transistors, and some passive components) are discrete. The active components may be packaged, or they may be placed on the substrate in chip form without individual packaging to reduce size and eliminate packaging-induced parasitics.[52]
+
+					Distributed amplifiers consist of a number of amplifying devices (usually FETs), with all their inputs connected via one transmission line and all their outputs via another transmission line. The lengths of the two lines must be equal between each transistor for the circuit to work correctly, and each transistor adds to the output of the amplifier. This is different from a conventional multistage amplifier, where the gain is multiplied by the gain of each stage. Although a distributed amplifier has lower gain than a conventional amplifier with the same number of transistors, it has significantly greater bandwidth. In a conventional amplifier, the bandwidth is reduced by each additional stage; in a distributed amplifier, the overall bandwidth is the same as the bandwidth of a single stage. Distributed amplifiers are used when a single large transistor (or a complex, multi-transistor amplifier) would be too large to treat as a lumped component; the linking transmission lines separate the individual transistors.[53] 
+				</div>
+				
+			</div>
+		</section>
+
+		
+	</main>
+	<footer>
+		<p>Copyright &copy; 2020. OKORIE IFEANYICHUKWU </p>
+	</footer>
+	
+</body>
+</html>

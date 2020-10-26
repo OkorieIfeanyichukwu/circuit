@@ -1,0 +1,46 @@
+body{
+	background: #eee;
+}
+#main{
+	display:flex;
+}
+.diagram{
+	display:block;
+}
+
+figcaption{
+	margin:-20px 0px 10px 40px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	width:330px;
+	background: #ccc;
+}
+footer{
+	position:relative;
+	background: #111;
+	display: flex;
+	color:#eee;
+	margin: 20px -8px -8px -8px;
+}
+ul{
+	list-style: none;
+}
+ul li a{
+	text-decoration: none;
+}
+nav{
+	background-color: #999;
+	display:flex;
+	margin: -8px -8px 8px -8px;
+}
+nav ul li{
+	display:inline;
+	margin-right: 20px;
+}
+nav ul li a{
+	color:#fff;
+
+}
+nav ul li .active{
+	color:#000;
+}
