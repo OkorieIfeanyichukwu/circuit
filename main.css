@@ -24,14 +24,16 @@ footer{
 	color:#eee;
 	margin: 20px -8px -8px -8px;
 }
-ul{
+nav,ul{
 	list-style: none;
+	align-items: center;
 }
 ul li a{
 	text-decoration: none;
 }
 nav{
 	background-color: #999;
+	height:45px;
 	display:flex;
 	margin: -8px -8px 8px -8px;
 }
