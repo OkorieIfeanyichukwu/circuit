@@ -24,34 +24,88 @@ footer{
 	color:#eee;
 	margin: 20px -8px -8px -8px;
 }
-nav,ul{
+nav ul{
+	position:absolute;
+	background-color: #999;
+	top:20px;
+	right:0;
 	list-style: none;
 	align-items: center;
+	padding-bottom:20px;
 }
 ul li a{
+	color: #000;
+}
+a{
 	text-decoration: none;
+	color:#111;
+	font-weight: 900;
+}
+a:hover{
+	text-decoration:underline;
+font-weight: bolder;
+text-decoration-style: double;
+
 }
 nav{
 	background-color: #999;
-	height:45px;
 	display:flex;
 	margin: -8px -8px 8px -8px;
 }
+nav h3{
+	text-shadow: 6px 3px 3px rgb(78, 72, 40),
+				12px 4px 6px rgb(36, 194, 194),
+				18px 5px 9px rgb(228, 64, 247);
+}
 nav ul li{
-	display:inline;
-	margin-right: 20px;
+	display:block;
+	font:italic normal 1.2em/1 "Helvetica Neue", Arial , sans-serif;
+	
 }
 nav ul li a{
 	color:#fff;
-
+	margin-right:auto;
+	margin-left:auto;
 }
 nav ul li .active{
 	color:hsl(1,80%,50%);
 	color:hsla(45,90%,30%,0.9);
+	text-shadow: 7px 3px 3px rgb(255, 211, 13),
+				14px 4px 6px rgb(160, 132, 89),
+				20px 5px 9px rgb(105, 70, 85);
 }
 
 span#test {
 	color:rgb(255,0,0);
 	color:rgba(255,0,0,0.5);
 	font:italic bold 1.2em/1 "Helvetica Neue", Arial , sans-serif;
+}
+.spacing{
+	margin-top:50px;
+}
+#toggle{
+	position:absolute;
+	display:inline;
+	right:0;
+}
+@media only screen  and (min-width:500px){
+	#toggle{
+		display: none;
+	}
+	nav{
+		height:45px;
+		display:flex;
+	}
+	nav ul li{
+		display:inline;
+		margin-right:20px;
+	}
+	nav ul{
+		display:inline;
+		position: relative;
+		background-color: transparent;
+		top:-2px;
+		list-style: none;
+		align-items: center;
+	}
 }
